@@ -1,0 +1,87 @@
+.pokemons{                    /*Toda lista em si*/
+    background-color: #f6f8fc;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pokemon{    
+    display: flex;              /*Tudo será flexivel a alteração.*/
+    flex-direction: column;     /*Permite alterar a direção de todos os elementeos flex*/
+    margin: .5rem;              /*Margem se adapta de acordo com o tamanho dos de mais elementos */
+    padding: 1rem;         /*Tem a ver com o preenchimento de um elemento*/  
+    border-radius: 1rem;        /*Borda redonda automaticamente*/
+    background-color: #49d8b2;
+    color: rgb(255, 255, 255);                             /*Cor de fundo de cada Pokemon*/
+}
+
+.pokemon .detail img{
+    display: flex;
+    flex-direction: row;
+    border-style: none;
+    max-width: 100%;      /*Permite que todo img não ultrapasse 100% de largura*/
+    height: 70px;        /*E Altura que não ultrapasse 110px*/
+    align-self: flex-end; /*Ele alinha todo elemento flex podendo sobreescrever alguns itens*/
+}                        /* Se alguma dos eixos das margens do dado item está estabelecido como auto , então align-self é ignorado.*/
+
+.pokemon .number{
+    color: #000000 ;
+    opacity: 0.3;
+    text-align: right;
+}
+
+.pokemon .types{
+    margin: 0;   /*Ao invés de usarmos o "aling-text" , usamos margin e padding*/
+    padding: 0;
+    list-style: none;
+}
+
+.pokemon .detail .types .type{
+    background-color: #61e1ca;
+    color: white;
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    border-radius: 1rem;
+    font-size: .625rem;
+}
+
+.pokemon .detail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pokemon .name {
+    color: white;
+    margin-bottom: .25rem;
+}
+
+@media screen and (min-width: 992px){
+    .content {
+        max-width: 992px;
+        height: auto;
+        margin: 1rem auto;
+        border-radius: 1rem;
+    }
+}
+@media screen and (min-width: 380px) {
+    ol.pokemons{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    ol.pokemons{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+    ol.pokemons{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+}
