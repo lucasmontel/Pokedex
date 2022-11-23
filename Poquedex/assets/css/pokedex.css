@@ -17,6 +17,25 @@
     color: rgb(255, 255, 255);                             /*Cor de fundo de cada Pokemon*/
 }
 
+.pokemon2{    
+    display: flex;              
+    flex-direction: column;     
+    margin: .5rem;              
+    padding: 1rem;          
+    border-radius: 1rem;       
+    background-color: #49d8b2;
+    color: rgb(255, 255, 255);                             /*Cor de fundo de cada Pokemon*/
+}
+
+.pokemon2 .detail img{
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    border-style: none;
+    max-width: 100%;      /*Permite que todo img não ultrapasse 100% de largura*/
+    height: 70px;        /*E Altura que não ultrapasse 110px*/
+    align-self: flex-end; /*Ele alinha todo elemento flex podendo sobreescrever alguns itens*/
+}    
 .pokemon .detail img{
     display: flex;
     flex-direction: row;
@@ -38,6 +57,13 @@
     list-style: none;
 }
 
+.pokemon2 .types{
+    margin: 0;   
+    padding: 0;
+    list-style: none;
+}
+
+
 .pokemon .detail .types .type{
     background-color: #61e1ca;
     color: white;
@@ -47,6 +73,14 @@
     font-size: .625rem;
 }
 
+.pokemon2 .detail .types .type{
+    background-color: #61e1ca;
+    color: white;
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    border-radius: 1rem;
+    font-size: .625rem;
+}
 .pokemon .detail {
     display: flex;
     flex-direction: row;
@@ -54,7 +88,20 @@
     justify-content: space-between;
 }
 
+.pokemon2 .detail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
 .pokemon .name {
+    color: white;
+    margin-bottom: .25rem;
+}
+
+.pokemon2 .name {
     color: white;
     margin-bottom: .25rem;
 }
