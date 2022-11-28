@@ -9,3 +9,12 @@
 ##### Ele processa o que vem como resultado do servidor
 # Catch
 ##### Diferente do then , o catch é caso algo de erro, e executa determinada coisa (caso verdadeiro)
+# Promisse.all(parâmetro)
+
+### .then((pokemons) => pokemons.map(pokeApi.getPokemonDetail))
+### .then((detailRequests) => Promise.all(detailRequests)):
+
+##### Na linha 14, fizemos uma requisição(chamando uma função que faz isso) para cada pokemon dentro da lista de pokemons(usando map), o que ele retornar, será atribuída  ao (detailRequest), depois falamos para ele esperar que a função que faz a requisição seja chamada para todos elementos do array, ou seja , cada "pokemon" , usando : "Promise.all(detailRequests)):"
+
+### .then((pokemonsDetails) => pokemonsDetails):
+##### Depois que fizemos a requisição para cada pokemon(A requisição ficará guardada com cada pokemon) falamos para ele que todos essa lista de requisição de pokemons é igual ao parâmetro.

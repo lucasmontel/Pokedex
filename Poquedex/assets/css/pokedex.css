@@ -128,12 +128,12 @@
 }
 
 .pagination {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 1rem;
+    display: flex; /*Permite todas as colunas serem alteradas(alteração flexivel)*/
+    flex-direction: row; /*O elemento será fixado em uma linha e sua posição só poderá ser alterada nela.*/
+    justify-content: center; /*Define em que o elemento ficará no centro da linha*/
+    align-items: center; /*Todos os itens do elemento também*/
+    width: 100%; /*Tamanho*/
+    padding: 1rem; /*Espaçamento*/
 }
 
 .pagination button {
@@ -142,8 +142,8 @@
     font-size: .625rem;
     color: #fff;
     background-color: #6c79db;
-    border: none;
-    border-radius: 1rem;
+    border: none; /*Borda sem*/
+    border-radius: 1rem; /*Define que ela tenha um arredondamento da borda com um tamanho baseado em outro*/
 }
 
 @media screen and (min-width: 380px) {

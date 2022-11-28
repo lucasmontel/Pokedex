@@ -21,6 +21,8 @@ function convertPokemonToLi(pokemon) {
     `
 }
 
+loadPokemonItens(offset, limit)//Assim será executado de primeira fazendo as requisições
+
 function loadPokemonItens(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
         const newHtml = pokemons.map(convertPokemonToLi).join('')
@@ -28,10 +30,9 @@ function loadPokemonItens(offset, limit) {
     })
 }
 
-loadPokemonItens(offset, limit)
 
 loadMoreButton.addEventListener('click', () => {
-    offset += limit
+    offset += limit //Assim ele como offset vale 0 e somado com o limit(5) ele irá valer cinco e irá requerir depois do offset que seria  o limite da primeira requisição feita
     const qtdRecordsWithNexPage = offset + limit
 
     if (qtdRecordsWithNexPage >= maxRecords) {
